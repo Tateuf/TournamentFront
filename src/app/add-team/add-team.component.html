@@ -1,0 +1,42 @@
+<header>
+    <h1>A.V Tournament</h1>
+</header>
+<body>
+    <div id="gauche">
+        <h2>Liste des équipes existantes:</h2>
+        <ul *ngFor="let t of teams">
+            <li>Id = {{t.team_id}} | Nom de l'équipe = {{t.name}}</li>
+        </ul>
+        <div>
+            <h2>Créer une nouvelle équipe :</h2>
+            <div>
+                <label for="name">name :</label>
+                <input type="text" id="name" [(ngModel)]="newTeam.name" name ="name">
+            </div>
+            <div>
+                <label for="email">email :</label>
+                <input type="text" id="email" [(ngModel)]="newTeam.email" name ="email">
+            </div>
+            <div>
+                <label for="member">member :</label>
+                <input type="number" id="team" [(ngModel)]="newTeam.member" name ="member">
+            </div>
+            <button (click)="createTeam()">Créer l'équipe</button>
+        </div>
+    </div>
+    <div id="right-left">
+        <h2>Ajouter des équipes au tournoi:</h2>
+        <form>
+            <label for="team">Id de l'équipe:</label>
+            <input type="text" id="team" [(ngModel)]="team.team_id" name ="team">
+            <button (click)="addTeam()">Ajouter l'équipe</button>
+            <button (click)="generate()">Generer le tournoi</button>
+        </form>
+    </div>
+    <div>
+        <h2>Liste des équipes participantes:</h2>
+        <ul *ngFor="let t of MyTeams">
+            <li>Id = {{t.team_id}} | Nom de l'équipe = {{t.name}}</li>
+        </ul>
+    </div>
+</body>

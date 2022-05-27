@@ -1,0 +1,65 @@
+<header>
+        <h1>A.V Tournament</h1>
+</header>
+<button (click)="connect()">se connecter</button>
+<body>
+    <div id="corps">
+        <div id="info">
+            <h3>Tournois en cours :</h3>
+            <ul *ngFor="let t of tournaments">
+                <li><a href="http://localhost:4200/mainPage/{{t.tournament_id}}" >{{t.name}}</a></li>
+            </ul>
+        </div>
+        <div id="coucou">
+            <div class="right" *ngIf="!boolean"> 
+                <h2>Veuillez sélectionner un tournoi pour l'afficher</h2>
+            </div>
+            <div class="right" *ngIf="boolean">
+                <div id="top">
+                    <div><h2>Nom du tournoi : {{tournament.name}}</h2></div>
+                    <div>Par : {{organizer.name}}</div>
+                </div>
+                <div id ="tournament">
+                    <h2> Table des matchs </h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td> Team A </td>
+                                <td> Score A </td>
+                                <td> Score B </td>
+                                <td> Team B</td>
+                                <td> Winner </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let m of matches">
+                                <td>{{m.teamA}}</td>
+                                <td>{{m.scoreA}}</td>
+                                <td>{{m.scoreB}}</td>
+                                <td>{{m.teamB}}</td>
+                                <td>{{m.winner}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2> Table des scores </h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td> ID </td>
+                                <td> Nom </td>
+                                <td> total de points </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let t of teams">
+                                <td>{{t.team_id}}</td>
+                                <td>{{t.name}}</td>
+                                <td>{{t.link_Tournament_Team.score}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>    
+    </div>
+</body> 

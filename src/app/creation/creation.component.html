@@ -1,0 +1,13 @@
+<header>
+    <h1>A.V Tournament</h1>
+</header>
+<body>
+    <div id="corps">
+        <div id="right-left">
+            <h2>Creation d'un tournoi : </h2>
+                <label for="name">Nom du tournoi:</label>
+                <input type="text" id="name" name="user_name" [(ngModel)]="tournament.name">
+                <button (click)="create()">Passer à l'ajout des équipes</button>
+        </div>
+    </div>
+</body>

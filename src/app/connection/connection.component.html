@@ -1,0 +1,33 @@
+<header>
+    <h1 id="title"> A.V. Tournament </h1>
+</header>
+<button (click)="disconnect()"> Quitter </button>
+<body>
+    <div id="left">
+    <h2>Se connecter afin de gérer vos tournois :</h2>
+    <div>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="user_name"o [(ngModel)]="organizer.name">
+    </div>
+    <div>
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" [(ngModel)]="organizer.password">
+    </div>
+    <button (click)="signIn()">se connecter</button>
+    <div>{{</div>
+
+    </div>
+    <div id='right'>
+        <h2>Déjà inscrit ?</h2>
+        <h2>Inscription :</h2>
+        <div>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="user_name" [(ngModel)]="organizer2.name">
+        </div>
+        <div>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" [(ngModel)]="organizer2.password">
+        </div>
+        <button (click)="signUp()">s'inscrire</button>
+    </div>
+</body>

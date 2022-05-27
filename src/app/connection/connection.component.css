@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    justify-content: space-around;
+}
+label
+{
+	display: block;
+	width: 150px;
+	float: left;
+}
+header {
+    display: flex;
+    justify-content: center;
+}

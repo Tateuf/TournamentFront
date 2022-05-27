@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    justify-content: center;
+}
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+#corps {
+    display: flex;
+}
+
+#info {
+    flex-grow: 1;
+}
+
+#coucou {
+    flex-grow: 5;
+}
+
+#top {
+    display : flex;
+    justify-content: space-around;
+}
